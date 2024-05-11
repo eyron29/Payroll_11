@@ -179,6 +179,7 @@ public class EmployeeList {
             }
         }
 
+        //Di yata accurate if ganito?
         presentNum = hoursWorked / 8.00;
 
         switch(subCode){
@@ -219,7 +220,7 @@ public class EmployeeList {
     }//addRecord
 
     public static double computeSalary(double hoursWorked, double hourlyRate){
-
+        //try lang, di pa accurate 
         if(hoursWorked > regHours){
             //with Overtime Pay (SWD/SOD)
             if(statCode.equals("SWD")){ //SWD: Single With Dependent
@@ -229,7 +230,6 @@ public class EmployeeList {
                 taxRate = regPay * 0.05;
                 netPay = (regPay + otPay) - taxRate;
             }
-            
         }
         return netPay;
     }//computeSalary
